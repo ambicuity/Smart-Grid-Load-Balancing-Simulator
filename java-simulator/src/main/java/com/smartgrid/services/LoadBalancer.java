@@ -80,8 +80,10 @@ public class LoadBalancer {
                 
                 excessLoad -= transferAmount;
                 
-                logger.info("Transferred {:.2f} MW from {} to {}", 
-                           transferAmount, overloadedNode.getNodeId(), underloadedNode.getNodeId());
+                logger.info("Transferred {} MW from {} to {}", 
+                           String.format("%.2f", transferAmount), 
+                           overloadedNode.getNodeId(), 
+                           underloadedNode.getNodeId());
             }
         }
 

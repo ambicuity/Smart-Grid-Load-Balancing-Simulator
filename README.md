@@ -40,9 +40,9 @@ Multi-threaded simulation engine built with Java 17+ that models:
 ### 2. C# REST API Layer
 
 ASP.NET Core 8.0 Web API providing:
-- **POST /api/sensor-data**: Ingest real-time sensor readings
-- **GET /api/grid-status**: Retrieve aggregated grid metrics
-- **POST /api/control/optimize**: Record optimization actions
+- **POST /api/SensorData**: Ingest real-time sensor readings
+- **GET /api/GridStatus**: Retrieve aggregated grid metrics
+- **POST /api/Control/optimize**: Record optimization actions
 
 **Key Features:**
 - Clean DTO-based API contracts
@@ -158,7 +158,7 @@ Edit `csharp-api/SmartGridAPI/appsettings.json`:
 
 ### Send Sensor Data
 ```bash
-curl -X POST http://localhost:5000/api/sensor-data \
+curl -X POST http://localhost:5000/api/SensorData \
   -H "Content-Type: application/json" \
   -d '[{
     "sensorId": "SENSOR-1",
@@ -172,7 +172,7 @@ curl -X POST http://localhost:5000/api/sensor-data \
 
 ### Get Grid Status
 ```bash
-curl http://localhost:5000/api/grid-status
+curl http://localhost:5000/api/GridStatus
 ```
 
 Response:
@@ -190,7 +190,7 @@ Response:
 
 ### Send Optimization Actions
 ```bash
-curl -X POST http://localhost:5000/api/control/optimize \
+curl -X POST http://localhost:5000/api/Control/optimize \
   -H "Content-Type: application/json" \
   -d '[{
     "fromNodeId": "NODE-1",

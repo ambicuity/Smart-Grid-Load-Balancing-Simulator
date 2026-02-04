@@ -169,8 +169,10 @@ public class SimulationEngine {
             logger.info("  {}", node);
         }
         
-        logger.info("Total Load: {:.2f} MW / {:.2f} MW ({:.1f}% utilization)",
-                totalLoad, totalCapacity, (totalLoad / totalCapacity) * 100);
+        logger.info("Total Load: {} MW / {} MW ({}% utilization)",
+                String.format("%.2f", totalLoad), 
+                String.format("%.2f", totalCapacity), 
+                String.format("%.1f", (totalLoad / totalCapacity) * 100));
         
         // Create and send sensor data to API
         List<Sensor> sensors = new ArrayList<>();

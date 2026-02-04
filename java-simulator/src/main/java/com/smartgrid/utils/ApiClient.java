@@ -37,7 +37,7 @@ public class ApiClient {
 
     public void sendSensorData(List<Sensor> sensors) {
         try {
-            String url = apiEndpoint + "/api/sensor-data";
+            String url = apiEndpoint + "/api/SensorData";
             
             // Convert sensors to DTOs
             List<Map<String, Object>> sensorDtos = sensors.stream()
@@ -64,7 +64,7 @@ public class ApiClient {
 
     public void sendOptimizationActions(List<LoadBalancer.OptimizationAction> actions) {
         try {
-            String url = apiEndpoint + "/api/control/optimize";
+            String url = apiEndpoint + "/api/Control/optimize";
             
             // Convert actions to DTOs
             List<Map<String, Object>> actionDtos = actions.stream()
